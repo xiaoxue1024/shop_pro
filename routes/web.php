@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 后台接口
+Route::group(['namespace'=>'Admin', 'prefix'=>'admin', 'middleware'=>'adminLogin'], function (){
+    //后台首页
+    Route::get('/', 'IndexController@index');
+});
