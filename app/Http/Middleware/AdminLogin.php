@@ -16,9 +16,9 @@ class AdminLogin
      */
     public function handle($request, Closure $next)
     {
-        if (empty(Session::get('admin'))) {
+        /*if (empty(Session::get('admin'))) {
             exit('请先登录');
-        }
+        }*/
         return $next($request);
     }
 }
